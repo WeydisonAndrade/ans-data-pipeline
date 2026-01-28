@@ -21,37 +21,4 @@ Essa decisão foi tomada considerando:
 •	maior escalabilidade e robustez do pipeline
 
 
-┌──────────────────────────┐
-│      API Pública ANS     │
-│  (Dados Abertos - ZIPs)  │
-└─────────────┬────────────┘
-              │
-              ▼
-┌──────────────────────────┐
-│        fase 1             │
-│ Ingestão e Download      │
-│ - Identifica trimestres  │
-│ - Baixa arquivos         │
-│ - Descompacta dados      │
-└─────────────┬────────────┘
-              │
-              ▼
-┌──────────────────────────┐
-│        fase 2             │
-│ Processamento            │
-│ - Leitura incremental    │
-│ - Identifica sinistros   │
-│ - Normaliza colunas      │
-│ - Trata inconsistências  │
-└─────────────┬────────────┘
-              │
-              ▼
-┌──────────────────────────┐
-│        fase 3             │
-│ Consolidação Final       │
-│ - Unifica trimestres     │
-│ - Resolve conflitos      │
-│ - Gera CSV final         │
-│ - Compacta em ZIP        │
-└──────────────────────────┘
 
